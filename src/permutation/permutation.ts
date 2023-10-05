@@ -15,6 +15,6 @@ function recursivePermutation(prefix: string, remaining: string): string[] {
     return Array.from(permutations);
 }
 
-export function permutation(inputStr: string): string[] {
+export function findPermutation(inputStr: string): string[] {
     return recursivePermutation('', inputStr);
 }
