@@ -1,7 +1,7 @@
-export function findOddInt(input: number[]): number {
+export function findOddInt(numberArr: number[]): number {
     const numCount: { [key: string]: number } = {};
 
-    for (const num of input) {
+    for (const num of numberArr) {
         if (!numCount[num.toString()]) numCount[num.toString()] = 0;
         numCount[num.toString()]++;
     }

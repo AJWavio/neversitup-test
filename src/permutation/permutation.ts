@@ -1,18 +1,18 @@
 function recursivePermutation(prefix: string, remaining: string): string[] {
-    const permutations: Set<string> = new Set();
+    const permutationsSet: Set<string> = new Set();
 
     if (!remaining) {
-        permutations.add(prefix);
+        permutationsSet.add(prefix);
     }
 
     for (let i = 0; i < remaining.length; i++) {
         const newPrefix = prefix + remaining[i];
         const newRemaining = remaining.slice(0, i) + remaining.slice(i + 1);
-        const subPermutations = recursivePermutation(newPrefix, newRemaining);
-        subPermutations.forEach(permutations.add, permutations);
+        const subPermutationsArr = recursivePermutation(newPrefix, newRemaining);
+        subPermutationsArr.forEach(permutationsSet.add, permutationsSet);
     }
 
-    return Array.from(permutations);
+    return Array.from(permutationsSet);
 }
 
 export function findPermutation(inputStr: string): string[] {

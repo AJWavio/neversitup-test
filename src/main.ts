@@ -1,4 +1,4 @@
-import { countSmileys } from "./count-smileys/count-smileys";
+import { getCountSmileys } from "./count-smileys/count-smileys";
 import { findOddInt } from "./find-odd/find-odd";
 import { findPermutation } from "./permutation/permutation";
 
@@ -15,6 +15,6 @@ console.log('findOddInt([1,1,2]):', findOddInt([1,1,2]));
 console.log('findOddInt([0,1,0,1,0]):', findOddInt([0,1,0,1,0]));
 
 console.log('\n---- Count Smiley Face ----\n')
-console.log('countSmileys([\':)\', \';(\', \';}\', \':-D\']):', countSmileys([':)', ';(', ';}', ':-D']));
-console.log('countSmileys([\';D\', \':-(\', \':-)\', \';~)\']):', countSmileys([';D', ':-(', ':-)', ';~)']));
-console.log('countSmileys([\';]\', \':[\', \';*\', \':$\', \';-D\']):', countSmileys([';]', ':[', ';*', ':$', ';-D']));
+console.log('countSmileys([\':)\', \';(\', \';}\', \':-D\']):', getCountSmileys([':)', ';(', ';}', ':-D']));
+console.log('countSmileys([\';D\', \':-(\', \':-)\', \';~)\']):', getCountSmileys([';D', ':-(', ':-)', ';~)']));
+console.log('countSmileys([\';]\', \':[\', \';*\', \':$\', \';-D\']):', getCountSmileys([';]', ':[', ';*', ':$', ';-D']));
